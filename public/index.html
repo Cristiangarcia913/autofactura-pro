@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoFactura Pro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>AutoFactura <span>Pro</span></h1>
+    <div id="modo" class="modo" hidden></div>
+    <button id="btn-export" class="primario">Exportar a Excel</button>
+  </header>
+
+  <main>
+    <section class="filtros" aria-label="Filtros">
+      <label>Año <select id="f-anio"></select></label>
+      <label>Trimestre
+        <select id="f-trimestre">
+          <option value="">Todos</option><option>T1</option><option>T2</option><option>T3</option><option>T4</option>
+        </select>
+      </label>
+      <label>Tipo
+        <select id="f-flujo"><option value="">Todos</option><option>Gasto</option><option>Ingreso</option></select>
+      </label>
+      <label>Categoría <select id="f-categoria"><option value="">Todas</option></select></label>
+      <label>Estado
+        <select id="f-estado">
+          <option value="">Todos</option><option>Requiere revisión</option><option>OK</option><option>Validado</option>
+        </select>
+      </label>
+      <label class="busca">Buscar <input id="f-q" type="search" placeholder="Proveedor, NIF o nº de factura"></label>
+    </section>
+
+    <section id="kpis" class="kpis" aria-label="Resumen"></section>
+
+    <section class="carga">
+      <div id="drop" class="drop" tabindex="0" role="button" aria-label="Subir facturas y tickets">
+        <strong>Arrastra aquí tus facturas y tickets</strong>
+        <span>PDF, JPG, PNG o WEBP · varios a la vez · o haz clic para elegirlos</span>
+        <input id="file" type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.webp,application/pdf,image/*" hidden>
+      </div>
+      <div id="progreso" class="progreso" hidden></div>
+      <div id="aviso" class="aviso" hidden></div>
+    </section>
+
+    <section class="tabla-wrap">
+      <div class="tabla-cab">
+        <h2>Documentos <small id="contador"></small></h2>
+        <small>Haz clic en cualquier celda para editarla. Los totales y el trimestre se recalculan solos.</small>
+      </div>
+      <div class="scroll"><table id="tabla"></table></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

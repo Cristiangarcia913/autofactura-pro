@@ -1,0 +1,21 @@
+{
+  "name": "autofactura-pro",
+  "version": "1.0.0",
+  "description": "AutoFactura Pro: facturas y tickets -> IA -> IVA/IRPF -> Excel para la gestoría",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
+    "demo": "MOCK_AI=1 node --disable-warning=ExperimentalWarning server.js",
+    "test": "node --disable-warning=ExperimentalWarning test/smoke.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "multer": "^2.0.0"
+  }
+}

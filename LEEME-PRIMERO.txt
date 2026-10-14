@@ -1,0 +1,62 @@
+AUTOFACTURA PRO — EMPIEZA AQUÍ
+================================
+
+Sube tus facturas y tickets, y la app te prepara el Excel para tu gestoría.
+
+
+PASO 1 · Instala Node.js (solo la primera vez)
+-----------------------------------------------
+Entra en https://nodejs.org , pulsa el botón verde "LTS", descarga e instala
+(siguiente, siguiente, finalizar).
+
+
+PASO 2 · Descomprime la carpeta
+-------------------------------
+Clic derecho sobre el ZIP y "Extraer todo" (Windows) o doble clic (Mac).
+Ponla en un sitio fácil, por ejemplo Documentos.
+
+
+PASO 3 · Dale doble clic para encenderla
+----------------------------------------
+  WINDOWS:  doble clic en  Iniciar-Windows.bat
+            (si sale un aviso azul: "Más información" y luego "Ejecutar de todas formas")
+
+  MAC:      doble clic en  Iniciar-Mac.command
+            (si dice que no se puede abrir: clic derecho > Abrir > Abrir)
+
+La primera vez tarda 1-2 minutos en instalar. Después se abre sola en el navegador.
+Si no se abre, escribe en el navegador:   http://localhost:3000
+
+
+PASO 4 · Úsala
+--------------
+Arrastra tus facturas (PDF, JPG o PNG) al recuadro grande.
+Corrige lo que salga en amarillo y pulsa "Exportar a Excel".
+
+
+PARA APAGARLA
+-------------
+Cierra la ventana negra (la que se abrió con el doble clic).
+Para volver a encenderla, repite el paso 3.
+
+
+¿ESTÁ EN "MODO DEMO"?
+---------------------
+La primera vez arranca en MODO DEMO: sale una etiqueta amarilla arriba y rellena
+datos de ejemplo, sin leer tus facturas de verdad. Es para que pruebes la pantalla.
+
+Para que lea tus facturas de verdad:
+  1. Abre el archivo ".env" de esta carpeta con el Bloc de notas
+     (si no lo ves, activa "mostrar archivos ocultos").
+  2. Rellena estas tres líneas:
+        ANTHROPIC_API_KEY=  (tu clave de https://console.anthropic.com)
+        USER_NIF=           (tu NIF o CIF, sin espacios)
+        MOCK_AI=0           (antes ponía 1)
+  3. Guarda, apaga la app (cierra la ventana negra) y vuelve a encenderla.
+
+IMPORTANTE: no compartas nunca tu archivo ".env", contiene tu clave.
+
+
+¿ALGO NO FUNCIONA?
+------------------
+Copia el texto de la ventana negra y pégaselo a Claude.
