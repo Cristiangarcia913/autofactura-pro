@@ -1,0 +1,16 @@
+services:
+  autofactura-pro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: autofactura-pro
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - USER_NIF=${USER_NIF:-}
+      - MOCK_AI=${MOCK_AI:-0}
+    volumes:
+      - ./data:/app/data

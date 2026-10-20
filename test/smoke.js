@@ -138,4 +138,10 @@ if (ExcelJS) {
 }
 
 console.log(`\n${ok} comprobaciones correctas`);
-fs.rmSync(process.env.DATA_DIR, { recursive: true, force: true });
+try {
+  if (typeof dbm.cerrarDb === 'function') dbm.cerrarDb();
+  else if (dbm.db?.close) dbm.db.close();
+} catch {}
+try {
+  fs.rmSync(process.env.DATA_DIR, { recursive: true, force: true });
+} catch {}
