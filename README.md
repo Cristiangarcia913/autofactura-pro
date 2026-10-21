@@ -21,6 +21,10 @@
   <img src="https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite&logoColor=white" alt="SQLite" />
 </p>
 
+<p align="center">
+  <img src="docs/screenshot.png" alt="AutoFactura Pro Dashboard" width="100%" />
+</p>
+
 ---
 
 ## 💡 ¿Qué es AutoFactura Pro?
